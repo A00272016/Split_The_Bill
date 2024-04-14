@@ -10,7 +10,7 @@ namespace MyLibrary_SplitBill;
             {
                 throw new ArgumentException("Number of people must be greater than zero.");
             }
-
+            
             return amount / numberOfPeople;
         }
     }
