@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary_SplitBill", "MyLibrary_SplitBill\MyLibrary_SplitBill.csproj", "{A888A9B1-4593-47CB-B935-598048FD03BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTests", "MyTests_SplitBill\MyTests.csproj", "{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{A888A9B1-4593-47CB-B935-598048FD03BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A888A9B1-4593-47CB-B935-598048FD03BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A888A9B1-4593-47CB-B935-598048FD03BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
