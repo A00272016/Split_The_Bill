@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary_SplitBill", "MyLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTests", "MyTests_SplitBill\MyTests.csproj", "{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTests_SplitBill", "MyTests_SplitBill\MyTests_SplitBill.csproj", "{A9C8B625-74DA-4C47-BFD0-FCF7D0AA4A22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C8B625-74DA-4C47-BFD0-FCF7D0AA4A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C8B625-74DA-4C47-BFD0-FCF7D0AA4A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C8B625-74DA-4C47-BFD0-FCF7D0AA4A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C8B625-74DA-4C47-BFD0-FCF7D0AA4A22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
