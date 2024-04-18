@@ -1,21 +1,4 @@
-﻿//using System;
-
-// namespace MyLibrary_SplitBill;
-// {
-//     public class Splitter
-//     {
-//         public decimal SplitAmount(decimal amount, int numberOfPeople)
-//         {
-//             if (numberOfPeople <= 0)
-//             {
-//                 throw new ArgumentException("Number of people must be greater than zero.");
-//             }
-            
-//             return amount / numberOfPeople;
-//         }
-//     }
-// }
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace MyLibrary_SplitBill
@@ -32,7 +15,6 @@ namespace MyLibrary_SplitBill
 
             return amount / numberOfPeople;
         }
-
         // Method to calculate tip amounts based on meal costs and tip percentage
         public Dictionary<string, decimal> CalculateTip(Dictionary<string, decimal> mealCosts, float tipPercentage)
         {
@@ -54,7 +36,6 @@ namespace MyLibrary_SplitBill
             {
                 throw new ArgumentException("Number of patrons must be greater than zero.");
             }
-
             decimal tipAmount = totalBill * (decimal)(tipPercentage / 100);
             return tipAmount / numberOfPatrons;
         }

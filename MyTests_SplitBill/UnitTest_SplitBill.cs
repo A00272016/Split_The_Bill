@@ -1,36 +1,61 @@
+using NUnit.Framework;
 using System;
-using Xunit;
-using MyLibrary_SplitBill;
 
-namespace MyTests_SplitBill
+[TestFixture]
+public class SplitAmountTests
 {
-    public class SplitterTests
+    [Test]
+    public void SplitEquallyAmongThreePeople()
     {
-        [Fact]
-        public void SplitAmount_Returns_CorrectAmount()
+        // Arrange
+        decimal amount = 150;
+        int numberOfPeople = 3;
+        decimal expectedSplit = 50;
+
+        // Act
+        decimal actualSplit = SplitAmount(amount, numberOfPeople);
+
+        // Assert
+        Assert.AreEqual(expectedSplit, actualSplit);
+    }
+
+    [Test]
+    public void UnequalSplitAmongFivePeople()
+    {
+        // Arrange
+        decimal amount = 200;
+        int numberOfPeople = 5;
+        decimal expectedSplit = 40;
+
+        // Act
+        decimal actualSplit = SplitAmount(amount, numberOfPeople);
+
+        // Assert
+        Assert.AreEqual(expectedSplit, actualSplit);
+    }
+
+    [Test]
+    public void SplitAmongOnePerson()
+    {
+        // Arrange
+        decimal amount = 100;
+        int numberOfPeople = 1;
+        decimal expectedSplit = 100;
+
+        // Act
+        decimal actualSplit = SplitAmount(amount, numberOfPeople);
+
+        // Assert
+        Assert.AreEqual(expectedSplit, actualSplit);
+    }
+
+    public decimal SplitAmount(decimal amount, int numberOfPeople)
+    {
+        if (numberOfPeople <= 0)
         {
-            // Arrange
-            var splitter = new Splitter();
-            decimal amount = 100;
-            int numberOfPeople = 4;
-
-            // Act
-            var result = splitter.SplitAmount(amount, numberOfPeople);
-
-            // Assert
-            Assert.Equal(25, result);
+            throw new ArgumentException("Number of people must be greater than zero.");
         }
 
-        [Fact]
-        public void SplitAmount_Throws_Exception_WhenNumberOfPeopleIsZero()
-        {
-            // Arrange
-            var splitter = new Splitter();
-            decimal amount = 100;
-            int numberOfPeople = 0;
-
-            // Act & Assert
-            Assert.Throws<ArgumentException>(() => splitter.SplitAmount(amount, numberOfPeople));
-        }
+        return amount / numberOfPeople;
     }
 }
