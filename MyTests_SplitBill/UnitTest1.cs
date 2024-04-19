@@ -1,22 +1,18 @@
+//A00271016
+//Milan Pandya
 using System.Collections;
 using MyLibrary_SplitBill;
-
 [TestClass]
 public class UnitTest1
 {
     [TestMethod]
     public void TestMethod1()
     {
-            // Arrange
             decimal amount = 150;
             int numberOfPeople = 3;
             decimal expectedSplit = 50;
-
-            // Act
             Method_SplitBill splitter = new Method_SplitBill();
             decimal actualSplit = splitter.SplitAmount(amount, numberOfPeople);
-
-            // Assert
             Assert.AreEqual(expectedSplit, actualSplit);
     }
     [TestMethod]
@@ -40,6 +36,52 @@ public class UnitTest1
             decimal actualSplit = splitter.SplitAmount(amount, numberOfPeople);
             Assert.AreEqual(expectedSplit, actualSplit);
         }   
+        //Test Cases For 2 Method :-
+        [TestMethod]
+        public void CalculateTip_WithZeroCost_ReturnsZeroTipAmount()
+        {
+        var mealCosts = new Dictionary<string, decimal>
+        {
+            { "Meal1", 0 }
+        };
+        float tipPercentage = 15; // 15% tip
+        var tipAmounts = CalculateTip(mealCosts, tipPercentage);
+        Assert.AreEqual(0, tipAmounts["Meal1"]);
+    }
+
+    [TestMethod]
+    public void CalculateTip_WithNonZeroCost_ReturnsCorrectTipAmount()
+    {
+        // Arrange
+        var mealCosts = new Dictionary<string, decimal>
+        {
+            { "Meal1", 50 }
+        };
+        float tipPercentage = 10; // 10% tip
+
+        // Act
+        var tipAmounts = CalculateTip(mealCosts, tipPercentage);
+
+        // Assert
+        Assert.AreEqual(5, tipAmounts["Meal1"]);
+    }
+
+    [TestMethod]
+    public void CalculateTip_WithNegativeCost_ReturnsZeroTipAmount()
+    {
+        // Arrange
+        var mealCosts = new Dictionary<string, decimal>
+        {
+            { "Meal1", -50 }
+        };
+        float tipPercentage = 15; // 15% tip
+
+        // Act
+        var tipAmounts = CalculateTip(mealCosts, tipPercentage);
+
+        // Assert
+        Assert.AreEqual(0, tipAmounts["Meal1"]);
+    }
         //Test Cases For 3 Method :-
         [TestMethod]
         public void CalculateTipPerPerson_WithValidInput_ReturnsCorrectTipPerPerson()
