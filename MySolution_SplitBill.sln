@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary_SplitBill", "MyLibrary_SplitBill\MyLibrary_SplitBill.csproj", "{A888A9B1-4593-47CB-B935-598048FD03BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTests", "MyTests_SplitBill\MyTests.csproj", "{A7C6C3CD-DAB8-42DF-9EB8-C1E1B4DEC9A0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTests_SplitBill", "MyTests_SplitBill\MyTests_SplitBill.csproj", "{A9C8B625-74DA-4C47-BFD0-FCF7D0AA4A22}"
 EndProject
 Global
