@@ -9,3 +9,4 @@ This is My Assignment for Split the bill.
 5.made my 1st test case.
 6.Still Facing Some error Tring to solve it.
 7.Still Facing some error Trying to solve it.
+8.Final Assignment Done With 0 Error , Passed all test cases for all 3 mehtods.

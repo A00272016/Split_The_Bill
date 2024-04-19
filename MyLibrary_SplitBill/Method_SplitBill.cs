@@ -1,4 +1,6 @@
-﻿using System;
+﻿//A002672016
+//Milan Pandya
+using System;
 using System.Collections.Generic;
 
 namespace MyLibrary_SplitBill
@@ -18,6 +20,7 @@ namespace MyLibrary_SplitBill
         // Method to calculate tip amounts based on meal costs and tip percentage
         public Dictionary<string, decimal> CalculateTip(Dictionary<string, decimal> mealCosts, float tipPercentage)
         {
+           
             var tipAmounts = new Dictionary<string, decimal>();
 
             foreach (var kvp in mealCosts)
@@ -32,12 +35,17 @@ namespace MyLibrary_SplitBill
         // Method to calculate tip per person based on total bill, number of patrons, and tip percentage
         public decimal CalculateTipPerPerson(decimal totalBill, int numberOfPatrons, float tipPercentage)
         {
-            if (numberOfPatrons <= 0)
+            if(tipPercentage<0){
+                throw new ArgumentException("Tip percentage can be either 0 or positive");
+            }
+            else if (numberOfPatrons <= 0)
             {
                 throw new ArgumentException("Number of patrons must be greater than zero.");
             }
-            decimal tipAmount = totalBill * (decimal)(tipPercentage / 100);
-            return tipAmount / numberOfPatrons;
+            else{
+                decimal tipAmount = totalBill * (decimal)(tipPercentage / 100);
+                return tipAmount / numberOfPatrons;
+            }
         }
     }
 }
